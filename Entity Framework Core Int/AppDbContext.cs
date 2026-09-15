@@ -12,7 +12,7 @@ public class AppDbContext : DbContext
 //Tools → NuGet Package Manager → Package Manager Console
 //И выполни:
 //Add-Migration InitialCreate
-
+//Update-Database
 
 // #in SQL Server
 // CREATE DATABASE OnlineStore
