@@ -217,3 +217,86 @@ Product Product20 = new Product
     CreatedAt = new DateTime(2026, 1, 20),
     IsAvailable = true
 };
+
+
+
+
+
+
+
+
+
+
+Console.WriteLine("========================\nONLINE STORE\n========================");
+
+Console.WriteLine("1. Show all products");
+Console.WriteLine("2. Add product");
+Console.WriteLine("3. Update product");
+Console.WriteLine("4. Delete product");
+Console.WriteLine();
+
+Console.WriteLine("5. Find product by name");
+Console.WriteLine("6. Show products by category");
+Console.WriteLine("7. Show available products");
+Console.WriteLine("8. Show expensive products");
+Console.WriteLine("9. Show products sorted by price");
+Console.WriteLine();
+
+Console.WriteLine("10. Show total products");
+Console.WriteLine("11. Show total inventory value");
+Console.WriteLine("...");
+Console.WriteLine();
+
+Console.WriteLine("0. Exit");
+Console.Write("Choose: ");
+
+switch (Console.ReadLine())
+{
+    case "1":
+        // Show all products
+        break;
+
+    case "2":
+        // Add product
+        break;
+
+    case "3":
+        // Update product
+        break;
+
+    case "4":
+        // Delete product
+        break;
+
+    case "5":
+        // Find product by name
+        break;
+
+    case "6":
+        // Show products by category
+        break;
+
+    case "7":
+        // Show available products
+        break;
+
+    case "8":
+        // Show expensive products
+        break;
+
+    case "9":
+        // Show products sorted by price
+        break;
+
+    case "10":
+        // Show total products
+        break;
+
+    case "11":
+        // Show total inventory value
+        break;
+
+    case "0":
+        // Exit
+        break;
+}
