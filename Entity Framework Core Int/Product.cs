@@ -1,4 +1,3 @@
-#1
 public class Product
 {
     public int Id { get; set; }
@@ -10,14 +9,3 @@ public class Product
     public bool IsAvailable { get; set; }
 
 }
-
-
-public class AppDbContext : DbContext
-{
-    public DbSet<Product> Products { get; set; }
-}
-
-
-
-#in SQL Server
-CREATE DATABASE OnlineStore
