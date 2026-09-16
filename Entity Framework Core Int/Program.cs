@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 AppDbContext context = new AppDbContext();
 var products = context.Products.ToList();
 
+
 Product Product1 = new Product
 {
-    Id = 1,
     Name = "Keyboard",
     Category = "Electronics",
     Price = 30.5m,
@@ -18,7 +18,6 @@ Product Product1 = new Product
 
 Product Product2 = new Product
 {
-    Id = 2,
     Name = "Mouse",
     Category = "Electronics",
     Price = 15.9m,
@@ -29,7 +28,6 @@ Product Product2 = new Product
 
 Product Product3 = new Product
 {
-    Id = 3,
     Name = "Monitor",
     Category = "Electronics",
     Price = 220.16m,
@@ -40,7 +38,6 @@ Product Product3 = new Product
 
 Product Product4 = new Product
 {
-    Id = 4,
     Name = "Laptop",
     Category = "Electronics",
     Price = 950.12m,
@@ -51,7 +48,6 @@ Product Product4 = new Product
 
 Product Product5 = new Product
 {
-    Id = 5,
     Name = "Headphones",
     Category = "Electronics",
     Price = 75.11m,
@@ -62,7 +58,6 @@ Product Product5 = new Product
 
 Product Product6 = new Product
 {
-    Id = 6,
     Name = "Desk",
     Category = "Furniture",
     Price = 180.5m,
@@ -73,7 +68,6 @@ Product Product6 = new Product
 
 Product Product7 = new Product
 {
-    Id = 7,
     Name = "Chair",
     Category = "Furniture",
     Price = 120.1m,
@@ -84,7 +78,6 @@ Product Product7 = new Product
 
 Product Product8 = new Product
 {
-    Id = 8,
     Name = "Bookshelf",
     Category = "Furniture",
     Price = 150.3m,
@@ -95,7 +88,6 @@ Product Product8 = new Product
 
 Product Product9 = new Product
 {
-    Id = 9,
     Name = "Notebook",
     Category = "Stationery",
     Price = 5.5m,
@@ -106,7 +98,6 @@ Product Product9 = new Product
 
 Product Product10 = new Product
 {
-    Id = 10,
     Name = "Pen",
     Category = "Stationery",
     Price = 2.5m,
@@ -117,7 +108,6 @@ Product Product10 = new Product
 
 Product Product11 = new Product
 {
-    Id = 11,
     Name = "Backpack",
     Category = "Accessories",
     Price = 45.8m,
@@ -128,7 +118,6 @@ Product Product11 = new Product
 
 Product Product12 = new Product
 {
-    Id = 12,
     Name = "Wallet",
     Category = "Accessories",
     Price = 35.6m,
@@ -139,7 +128,6 @@ Product Product12 = new Product
 
 Product Product13 = new Product
 {
-    Id = 13,
     Name = "T-Shirt",
     Category = "Clothing",
     Price = 25.1m,
@@ -150,7 +138,6 @@ Product Product13 = new Product
 
 Product Product14 = new Product
 {
-    Id = 14,
     Name = "Jeans",
     Category = "Clothing",
     Price = 60.7m,
@@ -161,7 +148,6 @@ Product Product14 = new Product
 
 Product Product15 = new Product
 {
-    Id = 15,
     Name = "Jacket",
     Category = "Clothing",
     Price = 110.47m,
@@ -172,7 +158,6 @@ Product Product15 = new Product
 
 Product Product16 = new Product
 {
-    Id = 16,
     Name = "Coffee",
     Category = "Food",
     Price = 12.4m,
@@ -183,7 +168,6 @@ Product Product16 = new Product
 
 Product Product17 = new Product
 {
-    Id = 17,
     Name = "Tea",
     Category = "Food",
     Price = 8.2m,
@@ -194,7 +178,6 @@ Product Product17 = new Product
 
 Product Product18 = new Product
 {
-    Id = 18,
     Name = "Chocolate",
     Category = "Food",
     Price = 6.5m,
@@ -205,7 +188,6 @@ Product Product18 = new Product
 
 Product Product19 = new Product
 {
-    Id = 19,
     Name = "Lamp",
     Category = "Home",
     Price = 40.7m,
@@ -216,7 +198,6 @@ Product Product19 = new Product
 
 Product Product20 = new Product
 {
-    Id = 20,
     Name = "Clock",
     Category = "Home",
     Price = 30.4m,
@@ -224,7 +205,6 @@ Product Product20 = new Product
     CreatedAt = new DateTime(2026, 1, 20),
     IsAvailable = true
 };
-
 
 
 context.Products.AddRange(
@@ -250,6 +230,7 @@ context.Products.AddRange(
     Product20
 );
 
+context.SaveChanges();
 
 
 
