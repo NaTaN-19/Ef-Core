@@ -207,7 +207,9 @@ Product Product20 = new Product
 };
 
 
-context.Products.AddRange(
+if (!context.Products.Any())
+{
+    context.Products.AddRange(
     Product1,
     Product2,
     Product3,
@@ -228,9 +230,9 @@ context.Products.AddRange(
     Product18,
     Product19,
     Product20
-);
-
-context.SaveChanges();
+    );
+    context.SaveChanges();
+}
 
 
 
