@@ -1,3 +1,10 @@
+using System.Xml.Linq;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
+AppDbContext context = new AppDbContext();
+var products = context.Products.ToList();
+
 Product Product1 = new Product
 {
     Id = 1,
@@ -220,6 +227,28 @@ Product Product20 = new Product
 
 
 
+context.Products.AddRange(
+    Product1,
+    Product2,
+    Product3,
+    Product4,
+    Product5,
+    Product6,
+    Product7,
+    Product8,
+    Product9,
+    Product10,
+    Product11,
+    Product12,
+    Product13,
+    Product14,
+    Product15,
+    Product16,
+    Product17,
+    Product18,
+    Product19,
+    Product20
+);
 
 
 
