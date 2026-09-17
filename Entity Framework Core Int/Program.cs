@@ -329,3 +329,28 @@ foreach (var product in productsFromOnlineStore)
     Console.WriteLine($"IsAvailable: {product.IsAvailable}");
     Console.WriteLine("----------------------------------");
 }
+
+
+
+string name = Console.ReadLine();
+string category = Console.ReadLine();
+decimal price = decimal.Parse(Console.ReadLine());
+int quantity = int.Parse(Console.ReadLine());
+DateTime createdat = DateTime.Parse(Console.ReadLine());
+bool isavailable = bool.Parse(Console.ReadLine());
+
+
+
+Product NewProduct = new Product
+{
+    Name = name,
+    Category = category,
+    Price = price,
+    Quantity = quantity,
+    CreatedAt = createdat,
+    IsAvailable = isavailable
+};
+
+
+context.Products.Add(NewProduct);
+context.SaveChanges();
