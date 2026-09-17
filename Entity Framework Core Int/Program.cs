@@ -312,3 +312,20 @@ switch (Console.ReadLine())
         // Exit
         break;
 }
+
+
+
+
+var productsFromOnlineStore = context.Products.ToList();
+
+foreach (var product in productsFromOnlineStore)
+{
+    Console.WriteLine($"Id: {product.Id}");
+    Console.WriteLine($"Name: {product.Name}");
+    Console.WriteLine($"Category: {product.Category}");
+    Console.WriteLine($"Price: {product.Price}");
+    Console.WriteLine($"Quantity: {product.Quantity}");
+    Console.WriteLine($"CreatedAt: {product.CreatedAt}");
+    Console.WriteLine($"IsAvailable: {product.IsAvailable}");
+    Console.WriteLine("----------------------------------");
+}
