@@ -2,10 +2,22 @@ using System.Xml.Linq;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
+//Install-Package Microsoft.EntityFrameworkCore
+//Install-Package Microsoft.EntityFrameworkCore.SqlServer
+//Install-Package Microsoft.EntityFrameworkCore.Tools
+//Tools → NuGet Package Manager → Package Manager Console
+//Add-Migration InitialCreate
+//Update-Database
+
+
+
+
+
+
 AppDbContext context = new AppDbContext();
 var products = context.Products.ToList();
 
-
+//4.Заполните базу
 Product Product1 = new Product
 {
     Name = "Keyboard",
@@ -234,11 +246,12 @@ if (!context.Products.Any())
     context.SaveChanges();
 }
 
+//#in SQL Server
+//CREATE DATABASE OnlineStore
 
 
 
-
-
+//5.Создайте консольное меню
 Console.WriteLine("========================\nONLINE STORE\n========================");
 
 Console.WriteLine("1. Show all products");
@@ -315,7 +328,7 @@ switch (Console.ReadLine())
 
 
 
-
+//1. Show all products
 var productsFromOnlineStore = context.Products.ToList();
 
 foreach (var product in productsFromOnlineStore)
@@ -330,7 +343,7 @@ foreach (var product in productsFromOnlineStore)
     Console.WriteLine("----------------------------------");
 }
 
-
+//2.Add product
 
 string name = Console.ReadLine();
 string category = Console.ReadLine();
@@ -354,3 +367,28 @@ Product NewProduct = new Product
 
 context.Products.Add(NewProduct);
 context.SaveChanges();
+
+
+
+//3.Update product
+Console.Write("Enter product Id: ");
+int id = int.Parse(Console.ReadLine());
+
+var product = context.Products.Find(id);
+
+if (product == null)
+{
+    Console.WriteLine("Product not found.");
+}
+else
+{
+    Console.Write("New price: ");
+    product.Price = decimal.Parse(Console.ReadLine());
+
+    Console.Write("New quantity: ");
+    product.Quantity = int.Parse(Console.ReadLine());
+
+    context.SaveChanges();
+
+    Console.WriteLine("Product updated!");
+}
