@@ -392,3 +392,7 @@ else
 
     Console.WriteLine("Product updated!");
 }
+
+
+
+//4.Delete product
