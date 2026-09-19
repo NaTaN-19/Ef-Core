@@ -396,3 +396,20 @@ else
 
 
 //4.Delete product
+Console.Write("Enter product Id: ");
+int id_del = int.Parse(Console.ReadLine());
+
+var product_del = context.Products.Find(id_del);
+
+if (product_del == null)
+{
+    Console.WriteLine("Product not found.");
+}
+else
+{
+    context.Products.Remove(product_del);
+
+    context.SaveChanges();
+
+    Console.WriteLine("Product Deleted!");
+}
