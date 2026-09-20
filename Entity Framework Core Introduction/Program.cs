@@ -30,7 +30,7 @@ void SeedProducts()
             Price = 30.5m,
             Quantity = 10,
             CreatedAt = new DateTime(2026, 1, 1),
-            IsAvailable = true
+            IsAvailable = false
         },
 
         new Product
@@ -100,7 +100,7 @@ void SeedProducts()
             Price = 150.3m,
             Quantity = 4,
             CreatedAt = new DateTime(2026, 1, 8),
-            IsAvailable = true
+            IsAvailable = false
         },
 
         new Product
@@ -220,7 +220,7 @@ void SeedProducts()
             Price = 30.4m,
             Quantity = 11,
             CreatedAt = new DateTime(2026, 1, 20),
-            IsAvailable = true
+            IsAvailable = false
         }
     );
 
