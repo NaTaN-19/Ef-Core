@@ -13,8 +13,6 @@ using Microsoft.EntityFrameworkCore;
 
 
 AppDbContext context = new AppDbContext();
-var products = context.Products.ToList();
-
 SeedProducts();
 RunMenu();
 
