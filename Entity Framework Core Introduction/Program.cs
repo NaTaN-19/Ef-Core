@@ -4,11 +4,7 @@ using Microsoft.EntityFrameworkCore;
 //Install-Package Microsoft.EntityFrameworkCore
 //Install-Package Microsoft.EntityFrameworkCore.SqlServer
 //Install-Package Microsoft.EntityFrameworkCore.Tools
-//in SQL Server
-//CREATE DATABASE OnlineStore
-//Tools → NuGet Package Manager → Package Manager Console
-//Add-Migration InitialCreate
-//Update-Database
+
 
 
 AppDbContext context = new AppDbContext();
