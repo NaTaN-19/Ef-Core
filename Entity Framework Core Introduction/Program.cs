@@ -218,7 +218,7 @@ void SeedProducts()
             Name = "Clock",
             Category = "Home",
             Price = 30.4m,
-            Quantity = 11,
+            Quantity = 0,
             CreatedAt = new DateTime(2026, 1, 20),
             IsAvailable = false
         }
