@@ -11,8 +11,6 @@ using Microsoft.EntityFrameworkCore;
 //Add-Migration InitialCreate
 //Update-Database
 
-Console.WriteLine("Hello, World!");
-
 AppDbContext context = new AppDbContext();
 var products = context.Products.ToList();
 
