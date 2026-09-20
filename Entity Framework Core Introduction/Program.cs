@@ -549,7 +549,7 @@ void ShowTheMostCheapProduct()
         .FirstOrDefault();
     Console.WriteLine($"{product.Id} | {product.Name} | {product.Category} | {product.Price}");
 }
-//14.Average proice
+//Average price
 void ShowAveragePrice()
 {
     decimal averagePrice = context.Products
