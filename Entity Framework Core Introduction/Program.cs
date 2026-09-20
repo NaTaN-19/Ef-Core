@@ -471,7 +471,6 @@ void ShowProductsByCategory()
 //Show available products
 void ShowAvailableProducts()
 {
-    Console.Write("Is Available: ");
     var products = context.Products
         .Where(p => p.IsAvailable)
         .ToList();
