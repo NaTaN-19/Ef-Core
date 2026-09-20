@@ -223,7 +223,6 @@ void SeedProducts()
             IsAvailable = false
         }
     );
-
     context.SaveChanges();
 
     Console.WriteLine("Products seeded!");
