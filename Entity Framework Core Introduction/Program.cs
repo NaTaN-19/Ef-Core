@@ -12,7 +12,6 @@ using Microsoft.EntityFrameworkCore;
 //Update-Database
 
 AppDbContext context = new AppDbContext();
-var products = context.Products.ToList();
 
 SeedProducts();
 RunMenu();
