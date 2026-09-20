@@ -11,7 +11,9 @@ using Microsoft.EntityFrameworkCore;
 //Add-Migration InitialCreate
 //Update-Database
 
+
 AppDbContext context = new AppDbContext();
+var products = context.Products.ToList();
 
 SeedProducts();
 RunMenu();
@@ -539,6 +541,13 @@ void ShowTheMostExpensiveProduct()
     var product = context.Products
         .OrderByDescending(p => p.Price)
         .FirstOrDefault();
+
+    if (product == null)
+    {
+        Console.WriteLine("No products found.");
+        return;
+    }
+
     Console.WriteLine($"{product.Id} | {product.Name} | {product.Category} | {product.Price}");
 }
 //The most cheap product
@@ -547,6 +556,13 @@ void ShowTheMostCheapProduct()
     var product = context.Products
         .OrderBy(p => p.Price)
         .FirstOrDefault();
+
+    if (product == null)
+    {
+        Console.WriteLine("No products found.");
+        return;
+    }
+
     Console.WriteLine($"{product.Id} | {product.Name} | {product.Category} | {product.Price}");
 }
 //Average price
