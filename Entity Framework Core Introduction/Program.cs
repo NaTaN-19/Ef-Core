@@ -565,6 +565,12 @@ void ShowTheMostCheapProduct()
 //Average price
 void ShowAveragePrice()
 {
+    if (!context.Products.Any())
+    {
+        Console.WriteLine("No products found.");
+        return;
+    }
+
     decimal averagePrice = context.Products
         .Average(p => p.Price);
 
